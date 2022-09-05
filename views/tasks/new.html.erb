@@ -1,0 +1,8 @@
+<h1>スケジュール新規登録</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+
+<%= flash.now[:failure] %>
+
+<%= render partial: 'form', locals: { task: @task } %>
+
+<%= link_to "スケジュール一覧", tasks_path %>

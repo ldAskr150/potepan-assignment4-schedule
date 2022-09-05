@@ -1,0 +1,29 @@
+<h1>スケジュール詳細</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @task.title %></td>
+  </tr>
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @task.description %></td>
+  </tr>
+  <tr>
+    <th>開始日</th>
+    <td><%= @task.start %></td>
+  </tr>
+  <tr>
+    <th>作成日</th>
+    <td><%= @task.created_at %></td>
+  </tr>
+  <tr>
+    <th>終日</th>
+    <td><% if @task.allday %><strong>◯</strong><% end %></td>
+  </tr>
+</table>
+
+<%= link_to "スケジュール一覧", tasks_path %>
+<%= link_to "スケジュール編集", edit_task_path %>
+<%= link_to "スケジュール削除", @task, method: :delete, data: { confirm: "本当に削除しますか？" } %>
